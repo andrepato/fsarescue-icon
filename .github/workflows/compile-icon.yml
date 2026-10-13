@@ -11,7 +11,7 @@ jobs:
       - name: Compile asset catalog
         run: |
           mkdir -p out
-          xcrun actool Assets.xcassets --compile out --platform iphoneos --minimum-deployment-target 26.0 --output-partial-info-plist out/partial-info.plist
+          xcrun actool Assets.xcassets --compile out --platform iphoneos --minimum-deployment-target 26.0 --app-icon AppIcon --output-partial-info-plist out/partial-info.plist
           ls -la out
       - uses: actions/upload-artifact@v4
         with:
